@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Calculator</title>
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        body {
+            background-color: black;
+
+        }
+
+        div>button {
+            background-color: rgb(52, 52, 52);
+            color: white;
+            border-radius: 33rem;
+            height: 40px;
+            border: none;
+
+        }
+
+        div>button:nth-child(18) {
+            grid-column: span 2;
+        }
+
+        #A,
+        #C,
+        #B {
+            background-color: gray;
+            color: black;
+        }
+
+        #E,
+        #H,
+        #L,
+        #P,
+        #S {
+            background-color: orange;
+        }
+
+        #cal {
+            display: grid;
+            grid-template-columns: 25fr 25fr 25fr 25fr;
+            grid-template-rows: 20fr 2ofr 20fr 20fr 20fr;
+            gap: .5rem;
+        }
+
+        div>#txt:nth-child(1) {
+            grid-column: span 4;
+            height: 5rem;
+
+        }
+
+        #resbox {
+            height: 4.7rem;
+            width: 100%;
+            border: none;
+            background-color: black;
+            text-align: right;
+            font-size: 3rem;
+            color: white;
+            outline: none;
+
+        }
+    </style>
+</head>
+
+<body></body>
+
+<div id="cal">
+    <div id="txt">
+        <input id="resbox" readonly value="0" type="text">
+
+    </div>
+    <button id="A" type="button" onclick="btnac()">AC</button>
+    <button id="C" type="button" onclick="btnpm()">+/-</button>
+    <button id="B" type="button" onclick="btnmod()">%</button>
+    <button id="E" type="button" onclick="btndv()">/</button>
+    <button id="D" type="button" onclick="btn7()">7</button>
+    <button id="F" type="button" onclick="btn8()">8</button>
+    <button id="G" type="button" onclick="btn9()">9</button>
+    <button id="H" type="button" onclick="btnmul()">x</button>
+    <button id="I" type="button" onclick="btn4()">4</button>
+    <button id="J" type="button" onclick="btn5()">5</button>
+    <button id="K" type="button" onclick="btn6()">6</button>
+    <button id="L" type="button" onclick="btnsub()">-</button>
+    <button id="M" type="button" onclick="btn1()">1</button>
+    <button id="N" type="button" onclick="btn2()">2</button>
+    <button id="O" type="button" onclick="btn3()">3</button>
+    <button id="P" type="button" onclick="btnadd()">+</button>
+    <button id="Q" type="button" onclick="btn0()">0</button>
+    <button id="R" type="button" onclick="btndot()">.</button>
+    <button id="S" type="button" onclick="btneql()">=</button>
+
+</div>
+</body>
+<script>
+    function btn1() {
+        const one = document.getElementById('resbox');
+        one.value = "1";
+    }
+    function btn2() {
+        const one = document.getElementById('resbox');
+        one.value = "2";
+    } function btn3() {
+        const one = document.getElementById('resbox');
+        one.value = "3";
+    } function btn4() {
+        const one = document.getElementById('resbox');
+        one.value = "4";
+    } function btn5() {
+        const one = document.getElementById('resbox');
+        one.value = "5";
+    } function btn6() {
+        const one = document.getElementById('resbox');
+        one.value = "6";
+    } function btn7() {
+        const one = document.getElementById('resbox');
+        one.value = "7";
+    } function btn8() {
+        const one = document.getElementById('resbox');
+        one.value = "8";
+    } function btn9() {
+        const one = document.getElementById('resbox');
+        one.value = "9";
+    } function btn0() {
+        const one = document.getElementById('resbox');
+        one.value = "0";
+    } function btnac() {
+        const one = document.getElementById('resbox');
+        one.value = "0";
+    } function btnpm() {
+        const one = document.getElementById('resbox');
+
+        if (one.value != '-') {
+            one.value = "-";
+        } else one.value = "+";
+    } function btnmod() {
+        const one = document.getElementById('resbox');
+        one.value = "";
+    } function btndv() {
+        const one = document.getElementById('resbox');
+        one.value = "";
+    }
+    function btnmul() {
+        const one = document.getElementById('resbox');
+        one.value = "";
+    } function btnsub() {
+        const one = document.getElementById('resbox');
+        one.value = "";
+    } function btnadd() {
+        const one = document.getElementById('resbox');
+        one.value = "";
+    } function btneql() {
+        const one = document.getElementById('resbox');
+        one.value = "";
+    } function btndot() {
+        const one = document.getElementById('resbox');
+        one.value = ".";
+    }
+</script>
+
+</html>
